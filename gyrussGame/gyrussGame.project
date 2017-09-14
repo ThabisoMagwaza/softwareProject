@@ -108,5 +108,8 @@
     <File Name="../Submissions/game-source-code/Game.h"/>
     <File Name="../Submissions/game-source-code/Player.cpp"/>
     <File Name="../Submissions/game-source-code/Player.h"/>
+    <File Name="../Submissions/game-source-code/source.cpp"/>
+    <File Name="../Submissions/game-source-code/SplashScreen.cpp"/>
+    <File Name="../Submissions/game-source-code/SplashScreen.h"/>
   </VirtualDirectory>
 </CodeLite_Project>
