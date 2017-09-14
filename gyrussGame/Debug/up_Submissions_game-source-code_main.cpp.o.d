@@ -1,4 +1,5 @@
-Debug/main.cpp.o: main.cpp \
+Debug/up_Submissions_game-source-code_main.cpp.o: \
+ ../Submissions/game-source-code/main.cpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Window.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/System.hpp \

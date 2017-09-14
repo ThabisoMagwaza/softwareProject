@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Thabiso Magwaza
-Date                   :=13/09/2017
+Date                   :=15/09/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -38,12 +38,12 @@ MakeDirCommand         :=makedir
 RcCmpOptions           := 
 RcCompilerName         :=C:/TDM-GCC-64/bin/windres.exe
 LinkOptions            :=  
-IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
+IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch)"C:\Users\Thabiso Magwaza\Desktop\ProgramSetups\win-64\sfml\include" 
 IncludePCH             := 
 RcIncludePath          := 
-Libs                   := 
-ArLibs                 :=  
-LibPath                := $(LibraryPathSwitch). 
+Libs                   := $(LibrarySwitch)sfml-audio $(LibrarySwitch)sfml-graphics $(LibrarySwitch)sfml-window $(LibrarySwitch)sfml-system 
+ArLibs                 :=  "sfml-audio" "sfml-graphics" "sfml-window" "sfml-system" 
+LibPath                := $(LibraryPathSwitch). $(LibraryPathSwitch)"C:\Users\Thabiso Magwaza\Desktop\ProgramSetups\win-64\sfml\lib" 
 
 ##
 ## Common variables
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(ObjectSuffix) $(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,37 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/projectCode/gyrussGame/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
+$(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(ObjectSuffix): ../Submissions/game-source-code/Game.cpp $(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/projectCode/Submissions/game-source-code/Game.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(DependSuffix): ../Submissions/game-source-code/Game.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(DependSuffix) -MM ../Submissions/game-source-code/Game.cpp
 
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+$(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(PreprocessSuffix): ../Submissions/game-source-code/Game.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_Submissions_game-source-code_Game.cpp$(PreprocessSuffix) ../Submissions/game-source-code/Game.cpp
+
+$(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(ObjectSuffix): ../Submissions/game-source-code/Player.cpp $(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/projectCode/Submissions/game-source-code/Player.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(DependSuffix): ../Submissions/game-source-code/Player.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(DependSuffix) -MM ../Submissions/game-source-code/Player.cpp
+
+$(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(PreprocessSuffix): ../Submissions/game-source-code/Player.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_Submissions_game-source-code_Player.cpp$(PreprocessSuffix) ../Submissions/game-source-code/Player.cpp
+
+$(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(ObjectSuffix): ../Submissions/game-source-code/source.cpp $(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/projectCode/Submissions/game-source-code/source.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(DependSuffix): ../Submissions/game-source-code/source.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(DependSuffix) -MM ../Submissions/game-source-code/source.cpp
+
+$(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(PreprocessSuffix): ../Submissions/game-source-code/source.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_Submissions_game-source-code_source.cpp$(PreprocessSuffix) ../Submissions/game-source-code/source.cpp
+
+$(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(ObjectSuffix): ../Submissions/game-source-code/SplashScreen.cpp $(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/projectCode/Submissions/game-source-code/SplashScreen.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(DependSuffix): ../Submissions/game-source-code/SplashScreen.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(DependSuffix) -MM ../Submissions/game-source-code/SplashScreen.cpp
+
+$(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(PreprocessSuffix): ../Submissions/game-source-code/SplashScreen.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_Submissions_game-source-code_SplashScreen.cpp$(PreprocessSuffix) ../Submissions/game-source-code/SplashScreen.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
