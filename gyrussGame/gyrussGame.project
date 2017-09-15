@@ -103,13 +103,13 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="game-source-code">
-    <File Name="../Submissions/game-source-code/Game.cpp"/>
-    <File Name="../Submissions/game-source-code/Game.h"/>
-    <File Name="../Submissions/game-source-code/Player.cpp"/>
-    <File Name="../Submissions/game-source-code/Player.h"/>
-    <File Name="../Submissions/game-source-code/source.cpp"/>
-    <File Name="../Submissions/game-source-code/SplashScreen.cpp"/>
-    <File Name="../Submissions/game-source-code/SplashScreen.h"/>
+  <VirtualDirectory Name="Submissions">
+    <File Name="../Submissions/Background.cpp"/>
+    <File Name="../Submissions/Background.h"/>
+    <File Name="../Submissions/Game.cpp"/>
+    <File Name="../Submissions/Game.h"/>
+    <File Name="../Submissions/main.cpp"/>
+    <File Name="../Submissions/SplashScreen.cpp"/>
+    <File Name="../Submissions/SplashScreen.h"/>
   </VirtualDirectory>
 </CodeLite_Project>
