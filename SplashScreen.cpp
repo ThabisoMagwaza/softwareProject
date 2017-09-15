@@ -1,31 +1,29 @@
 #include "SplashScreen.h"
-#include <iostream>
-
 void SplashScreen::show(sf::RenderWindow& window){
         sf::FileInputStream stream;
-        stream.open("im.jpg");
+        stream.open("im22.jpg");
         sf::Texture texture;
         texture.loadFromStream(stream);
         sf::Sprite sprite;
         sprite.setTexture(texture);    
+        
         sf::Font font;
         font.loadFromFile("stoz.ttf");
         sf::Text text;
         text.setFont(font);
-        text.setString("Hello World");
+        text.setString("Press ANY key to Start Game");
         text.setPosition(512,320);
         text.setColor(sf::Color::Black);
         text.setStyle(sf::Text::Italic);
-    window.draw(sprite);
-    window.draw(text);
-    window.display();
+        window.draw(sprite);
+        window.draw(text);
+        window.display();
     
-    sf::Event localEvent;
+    sf::Event Event1;
     while(true){
-        while(window.pollEvent(localEvent)){
-        if(localEvent.type == sf::Event::EventType::KeyPressed || localEvent.type == sf::Event::EventType::MouseButtonPressed || localEvent.type == sf::Event::EventType::Closed)
+        while(window.pollEvent(Event1)){
+        if(Event1.type == sf::Event::EventType::KeyPressed /*|| Event1.type == sf::Event::EventType::Closed*/)
             return;   
-    
         }        
     }
 }
