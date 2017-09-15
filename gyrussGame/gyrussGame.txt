@@ -1,1 +1,1 @@
-./Debug/up_Submissions_Background.cpp.o ./Debug/up_Submissions_Game.cpp.o ./Debug/up_Submissions_main.cpp.o ./Debug/up_Submissions_SplashScreen.cpp.o   
+./Debug/Submissions_Background.cpp.o ./Debug/Submissions_Game.cpp.o ./Debug/Submissions_main.cpp.o ./Debug/Submissions_SplashScreen.cpp.o   
