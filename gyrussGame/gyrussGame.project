@@ -104,12 +104,12 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="Submissions">
-    <File Name="../Submissions/Background.cpp"/>
-    <File Name="../Submissions/Background.h"/>
-    <File Name="../Submissions/Game.cpp"/>
-    <File Name="../Submissions/Game.h"/>
-    <File Name="../Submissions/main.cpp"/>
-    <File Name="../Submissions/SplashScreen.cpp"/>
-    <File Name="../Submissions/SplashScreen.h"/>
+    <File Name="Submissions/Background.cpp"/>
+    <File Name="Submissions/Background.h"/>
+    <File Name="Submissions/Game.cpp"/>
+    <File Name="Submissions/Game.h"/>
+    <File Name="Submissions/main.cpp"/>
+    <File Name="Submissions/SplashScreen.cpp"/>
+    <File Name="Submissions/SplashScreen.h"/>
   </VirtualDirectory>
 </CodeLite_Project>
