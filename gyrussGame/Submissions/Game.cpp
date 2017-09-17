@@ -4,6 +4,8 @@
 
 
 
+
+
 //This function initializes the game!
 void Game::GameStart(){
     Window1.create(sf::VideoMode(1024,640,32),"Game",sf::Style::Default);
@@ -13,8 +15,13 @@ void Game::GameStart(){
     }
     Window1.close();
 }
-//Checks if the game is still played or no!
-bool Game::isQuiting(){ return (Mode==Game::GameMode::Quiting);}
+//Checks if the game is still playing or no!
+bool Game::isQuiting(){
+    if (Mode == Game::GameMode::Quiting)
+        return true;
+    else
+        return false;
+    }
 
 
 void Game::dispSplash(){
@@ -28,12 +35,13 @@ void Game::dispBackground(){
     Background screen;
     screen.disp(Window1);
     Mode = Game::GameMode::Playing;
+    
 }
+
 
 void Game::MainLoop(){
    
         switch (Mode){
-            //Case Handler for the splash in the initialization.
             case Game::GameMode::Splash:{
                 dispSplash();
                 break;
@@ -47,7 +55,7 @@ void Game::MainLoop(){
                      Mode = Game::GameMode::Quiting;
                      Window1.close();
                 }
-              break; 
+                break; 
             }
             
         }
@@ -56,3 +64,7 @@ void Game::MainLoop(){
 
 Game::GameMode Game::Mode = Game::GameMode::Uninitialized;
 sf::RenderWindow Game::Window1;
+
+
+
+

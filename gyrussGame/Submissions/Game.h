@@ -2,10 +2,13 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include "ClassTests.h"
 
 class Game{
+    //friend class TestingClass;
     public:
      static void GameStart();
+     
      
      private:
      static void MainLoop();
