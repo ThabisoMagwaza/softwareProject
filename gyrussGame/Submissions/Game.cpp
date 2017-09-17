@@ -47,13 +47,7 @@ void Game::MainLoop(){
                      Mode = Game::GameMode::Quiting;
                      Window1.close();
                 }
-                if(EventNow.type == sf::Event::KeyPressed)
-                    {
-                      Window1.clear(sf::Color::Green);
-                      Game::GameMode:: Quiting;
-                      Window1.display();
-                    }
-                break; 
+              break; 
             }
             
         }
