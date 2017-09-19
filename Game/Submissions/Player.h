@@ -18,5 +18,6 @@ public:
 private:
     sf::Texture pTexture;
     sf::Vector2f _scale;
+    std::shared_ptr<sf::Sprite> _sprite;
     double _globalBoundHeight; 
 };

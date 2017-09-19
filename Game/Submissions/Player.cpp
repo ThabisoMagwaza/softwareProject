@@ -8,21 +8,22 @@ Player::Player(std::string imDirectory,const sf::Vector2f& startPosition, const 
         std::cerr <<"Cannot load image";
     }
     _scale = scale;
-    Movement::_sprite.setTexture(pTexture);
-    Movement::_sprite.setScale(_scale);
-    _globalBoundHeight = Movement::_sprite.getGlobalBounds().height;
+    _sprite = Movement::getSprite();
+    _sprite->setTexture(pTexture);
+    _sprite->setScale(_scale);
+    _globalBoundHeight = _sprite->getGlobalBounds().height;
     Movement::initialize(startPosition,origin,_globalBoundHeight);
 }
 
 
 void Player::drawPlayer(sf::RenderWindow &window){
-    window.draw(Movement::_sprite);
+    window.draw(*_sprite);
 }
 
 
 void Player::setScale(const sf::Vector2f& newScale){
     _scale = newScale;
-    Movement::_sprite.scale(_scale);
+    _sprite->scale(_scale);
 }
 
 sf::Vector2f Player::getScale() const {

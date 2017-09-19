@@ -13,7 +13,8 @@ public:
     void rotateLeft( const double& rotationRadius, const double& rotationAngle = 1);
     void setLocation(const sf::Vector2f& newLocation);
     sf::Vector2f getLocation() const;
-protected:
+    std::shared_ptr<sf::Sprite> getSprite();
+private:
     sf::Sprite _sprite;
     sf::Vector2f _location;
     sf::Vector2f _origin; //center of screen

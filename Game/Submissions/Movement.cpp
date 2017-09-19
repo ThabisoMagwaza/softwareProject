@@ -43,3 +43,8 @@ void Movement::setLocation(const sf::Vector2f& newLocation){
     _location = newLocation;
     _sprite.setPosition(newLocation);
 }
+
+std::shared_ptr<sf::Sprite> Movement::getSprite(){
+    std::shared_ptr<sf::Sprite> temp(&_sprite);
+    return temp;
+}
