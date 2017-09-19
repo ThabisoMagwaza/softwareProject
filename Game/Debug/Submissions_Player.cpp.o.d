@@ -1,5 +1,5 @@
 Debug/Submissions_Player.cpp.o: Submissions/Player.cpp \
- Submissions/Player.h \
+ Submissions/Player.h Submissions/Movement.h \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Window.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/System.hpp \
@@ -71,6 +71,8 @@ Debug/Submissions_Player.cpp.o: Submissions/Player.cpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Text.hpp
 
 Submissions/Player.h:
+
+Submissions/Movement.h:
 
 C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics.hpp:
 

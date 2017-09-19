@@ -16,10 +16,10 @@
     <File Name="Submissions/Movement.h"/>
     <File Name="Submissions/Player.cpp"/>
     <File Name="Submissions/Player.h"/>
-    <File Name="Submissions/source.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="Submissions/source.cpp"/>
     <File Name="Submissions/SplashScreen.cpp"/>
     <File Name="Submissions/SplashScreen.h"/>
-    <File Name="Submissions/gameTest.cpp" ExcludeProjConfig=""/>
+    <File Name="Submissions/gameTest.cpp" ExcludeProjConfig="Debug"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -32,7 +32,7 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-64 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+      <Compiler Options="-g;-O0;-std=c++14;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="C:\Users\Thabiso Magwaza\Desktop\ProgramSetups\win-64\sfml\include"/>
         <IncludePath Value="C:\Users\Thabiso Magwaza\Documents\doctest-master\doctest-master\doctest"/>
       </Compiler>

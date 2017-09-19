@@ -4,6 +4,9 @@
 #include <SFML/Window.hpp>
 #include "Player.h"
 #include "Background.h"
+#include "Movement.h"
+#include <iostream>
+#include <memory>
 
 class Game{
     public:
@@ -20,4 +23,5 @@ class Game{
      static Player _player;
      static double _screenWidth;
      static double _screenHeight;
+     static Movement _playerMovement;
 };

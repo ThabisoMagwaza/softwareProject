@@ -68,7 +68,7 @@ Debug/Submissions_source.cpp.o: Submissions/source.cpp Submissions/Game.h \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Shader.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Sprite.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Text.hpp \
- Submissions/Player.h Submissions/Background.h
+ Submissions/Player.h Submissions/Background.h Submissions/Movement.h
 
 Submissions/Game.h:
 
@@ -213,3 +213,5 @@ C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphic
 Submissions/Player.h:
 
 Submissions/Background.h:
+
+Submissions/Movement.h:

@@ -4,7 +4,8 @@
 
 double Game::_screenWidth = 1024;
 double Game::_screenHeight = 640;
-Player Game::_player{"resources/ship.png", sf::Vector2f((_screenWidth/2),_screenHeight)};
+Player Game::_player{"resources/ship.png",sf::Vector2f((_screenWidth/2),_screenHeight),sf::Vector2f((_screenWidth/2),(_screenHeight/2))};
+//Movement Game::_playerMovement{_player.getSprite(),sf::Vector2f((_screenWidth/2),_screenHeight),_player.getGlobalBoundHeight()};
 
 
 //This function initializes the game!
@@ -31,7 +32,7 @@ void Game::dispSplash(){
 
 
 void Game::MainLoop(){
-   
+        
         switch (Mode){
             //Case Handler for the splash in the initialization.
             case Game::GameMode::Splash:
@@ -52,9 +53,9 @@ void Game::MainLoop(){
             }
             
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-                _player.movePlayer('r');
+                _player.rotateRight((_screenHeight/2)-(_player.getGlobalBoundHeight()),0.5);
             }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-                _player.movePlayer('l');
+                _player.rotateLeft((_screenHeight/2)-(_player.getGlobalBoundHeight()),0.5);
             }
             
             Window1.clear();
