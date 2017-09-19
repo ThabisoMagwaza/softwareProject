@@ -4,9 +4,7 @@
 
 double Game::_screenWidth = 1024;
 double Game::_screenHeight = 640;
-Player Game::_player{"resources/ship.png",sf::Vector2f((_screenWidth/2),_screenHeight),sf::Vector2f((_screenWidth/2),(_screenHeight/2))};
-//Movement Game::_playerMovement{_player.getSprite(),sf::Vector2f((_screenWidth/2),_screenHeight),_player.getGlobalBoundHeight()};
-
+Player Game::_player{"resources/ship.png",sf::Vector2f((_screenWidth/2),_screenHeight),sf::Vector2f((_screenWidth/2),(_screenHeight/2)),(_screenHeight/2)};
 
 //This function initializes the game!
 void Game::GameStart(){
@@ -53,9 +51,9 @@ void Game::MainLoop(){
             }
             
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
-                _player.rotateRight((_screenHeight/2)-(_player.getGlobalBoundHeight()),0.5);
+                _player.rotateRight(0.5);
             }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
-                _player.rotateLeft((_screenHeight/2)-(_player.getGlobalBoundHeight()),0.5);
+                _player.rotateLeft(0.5);
             }
             
             Window1.clear();

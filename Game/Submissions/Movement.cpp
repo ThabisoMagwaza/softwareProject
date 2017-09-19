@@ -9,27 +9,28 @@ Movement::Movement(){
     _sprite.setPosition(_location);
 }
 
-void Movement::initialize( const sf::Vector2f& startPosition, const sf::Vector2f& origin, const double& globalBoundsHeight, const double& startAngle){
+void Movement::initialize( const sf::Vector2f& startPosition, const sf::Vector2f& origin, const double& radius,const double& globalBoundsHeight, const double& startAngle){
     _currentAngle = startAngle;
     _origin = origin;
+    _radius = radius;
     _location = sf::Vector2f(startPosition.x,startPosition.y - globalBoundsHeight);
     _sprite.setPosition(_location);
 }
 
-void Movement::rotateRight(const double& rotationRadius, const double rotationAngle){
+void Movement::rotateRight( const double rotationAngle){
     _currentAngle -= rotationAngle;
 
-    _location.x = _origin.x + (rotationRadius * cos(_currentAngle*(3.14/180)));
-    _location.y = _origin.y + (rotationRadius * sin(_currentAngle *(3.14/180)));
+    _location.x = _origin.x + (_radius * cos(_currentAngle*(3.14/180)));
+    _location.y = _origin.y + (_radius * sin(_currentAngle *(3.14/180)));
     _sprite.setPosition(_location);
     
     _sprite.rotate(-rotationAngle);
 }
 
-void Movement::rotateLeft( const double& rotationRadius, const double& rotationAngle){
+void Movement::rotateLeft( const double& rotationAngle){
     _currentAngle += rotationAngle;
-    _location.x = _origin.x + (rotationRadius * cos(_currentAngle*(3.14/180)));
-    _location.y = _origin.y + (rotationRadius * sin(_currentAngle *(3.14/180)));
+    _location.x = _origin.x + (_radius * cos(_currentAngle*(3.14/180)));
+    _location.y = _origin.y + (_radius * sin(_currentAngle *(3.14/180)));
     _sprite.setPosition(_location);
     
     _sprite.rotate(rotationAngle);

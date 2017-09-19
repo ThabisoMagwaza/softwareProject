@@ -23,5 +23,4 @@ class Game{
      static Player _player;
      static double _screenWidth;
      static double _screenHeight;
-     static Movement _playerMovement;
 };

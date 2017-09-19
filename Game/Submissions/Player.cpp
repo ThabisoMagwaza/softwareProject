@@ -2,7 +2,7 @@
 #include<cmath>
 #include<iostream>
 
-Player::Player(std::string imDirectory,const sf::Vector2f& startPosition, const sf::Vector2f& origin, const sf::Vector2f& scale )
+Player::Player(std::string imDirectory,const sf::Vector2f& startPosition, const sf::Vector2f& origin,const double& radius, const sf::Vector2f& scale )
 {
     if(!pTexture.loadFromFile(imDirectory)){
         std::cerr <<"Cannot load image";
@@ -12,7 +12,7 @@ Player::Player(std::string imDirectory,const sf::Vector2f& startPosition, const 
     _sprite->setTexture(pTexture);
     _sprite->setScale(_scale);
     _globalBoundHeight = _sprite->getGlobalBounds().height;
-    Movement::initialize(startPosition,origin,_globalBoundHeight);
+    Movement::initialize(startPosition,origin,radius-_globalBoundHeight,_globalBoundHeight);
 }
 
 
