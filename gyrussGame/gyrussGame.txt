@@ -1,1 +1,0 @@
-./Debug/up_Submissions_game-source-code_Game.cpp.o ./Debug/up_Submissions_game-source-code_Player.cpp.o ./Debug/up_Submissions_game-source-code_source.cpp.o ./Debug/up_Submissions_game-source-code_SplashScreen.cpp.o   

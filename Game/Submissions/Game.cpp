@@ -2,11 +2,14 @@
 #include "SplashScreen.h"
 #include "Background.h"
 
-
+double Game::_screenWidth = 1024;
+double Game::_screenHeight = 640;
+Player Game::_player{"resources/ship.png",sf::Vector2f((_screenWidth/2),_screenHeight),sf::Vector2f((_screenWidth/2),(_screenHeight/2)),(_screenHeight/2)};
 
 //This function initializes the game!
 void Game::GameStart(){
-    Window1.create(sf::VideoMode(1024,640,32),"Game",sf::Style::Default);
+    Window1.create(sf::VideoMode(_screenWidth,_screenHeight,32),"Game",sf::Style::Default);
+    Window1.setKeyRepeatEnabled(true);
     Mode = Game::GameMode::Splash;
     while(!isQuiting()){
     MainLoop();
@@ -24,39 +27,42 @@ void Game::dispSplash(){
     Mode = Game::GameMode::Playing;
 }
 
-void Game::dispBackground(){
-    Background screen;
-    screen.disp(Window1);
-    Mode = Game::GameMode::Playing;
-}
+
 
 void Game::MainLoop(){
-   
+        
         switch (Mode){
             //Case Handler for the splash in the initialization.
-            case Game::GameMode::Splash:{
+            case Game::GameMode::Splash:
                 dispSplash();
                 break;
-            }
             
-            case Game::GameMode::Playing:{
+            case Game::GameMode::Playing:
                  sf::Event EventNow;
+                 
+                 //event loop
                 while(Window1.pollEvent(EventNow)){
-                dispBackground();
+                //dispBackground();
                 if(EventNow.type == sf::Event::Closed){
                      Mode = Game::GameMode::Quiting;
                      Window1.close();
                 }
-                if(EventNow.type == sf::Event::KeyPressed)
-                    {
-                      Window1.clear(sf::Color::Green);
-                      Game::GameMode:: Quiting;
-                      Window1.display();
-                    }
-                break; 
+
             }
             
-        }
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)){
+                _player.rotateRight(0.5);
+            }else if(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)){
+                _player.rotateLeft(0.5);
+            }
+            
+            Window1.clear();
+            //dispBackground();
+            _player.drawPlayer(Window1);
+            Window1.display();
+            break;
+        default:
+            break;
         }
 }
 

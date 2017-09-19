@@ -4,7 +4,7 @@
 
 void Background::disp(sf::RenderWindow& window1){
         sf::FileInputStream input;
-        input.open("im.jpg");
+        input.open("resources/im.jpg");
         sf::Texture texture1;
         texture1.loadFromStream(input);
         sf::Sprite SPRITE;

@@ -1,6 +1,5 @@
-Debug/up_Submissions_game-source-code_Player.cpp.o: \
- ../Submissions/game-source-code/Player.cpp \
- ../Submissions/game-source-code/Player.h \
+Debug/Submissions_Player.cpp.o: Submissions/Player.cpp \
+ Submissions/Player.h Submissions/Movement.h \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Window.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/System.hpp \
@@ -71,7 +70,9 @@ Debug/up_Submissions_game-source-code_Player.cpp.o: \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Sprite.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Text.hpp
 
-../Submissions/game-source-code/Player.h:
+Submissions/Player.h:
+
+Submissions/Movement.h:
 
 C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics.hpp:
 
