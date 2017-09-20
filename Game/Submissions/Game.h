@@ -17,10 +17,14 @@ class Game{
      static bool isQuiting();
      static void dispSplash();
      static void dispBackground();
+     static Background _background;
      enum class GameMode {Playing, Quiting, Splash, Menu, Uninitialized};
      static sf::RenderWindow Window1;
      static GameMode Mode;
      static Player _player;
      static double _screenWidth;
      static double _screenHeight;
+     
+     static Player _player1;
+     static Player _player2;
 };

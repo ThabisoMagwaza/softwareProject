@@ -21,9 +21,10 @@ void Player::drawPlayer(sf::RenderWindow &window){
 }
 
 
-void Player::setScale(const sf::Vector2f& newScale){
-    _scale = newScale;
-    _sprite->scale(_scale);
+void Player::scale(const sf::Vector2f& scale){
+    //_scale = newScale;
+    _sprite->scale(scale);
+    _scale = _sprite->getScale();
 }
 
 sf::Vector2f Player::getScale() const {
@@ -34,3 +35,9 @@ sf::Vector2f Player::getScale() const {
 double Player::getGlobalBoundHeight(){
     return _globalBoundHeight;
 }
+
+void Player::setScale(const sf::Vector2f& newScale){
+    _scale = newScale;
+    _sprite->setScale(newScale);
+}
+

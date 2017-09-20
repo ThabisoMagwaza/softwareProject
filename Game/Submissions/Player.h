@@ -14,6 +14,7 @@ public:
     void drawPlayer(sf::RenderWindow &window); 
     void setScale(const sf::Vector2f& newScale);
     sf::Vector2f getScale() const;
+    void scale(const sf::Vector2f& scale);
     double getGlobalBoundHeight();
 private:
     sf::Texture pTexture;
