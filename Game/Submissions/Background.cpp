@@ -2,22 +2,22 @@
 #include <iostream>
 
 
-void Background::disp(sf::RenderWindow& window1){
+Background::Background(){
         sf::FileInputStream input;
         input.open("resources/im.jpg");
-        sf::Texture texture1;
-        texture1.loadFromStream(input);
-        sf::Sprite SPRITE;
-        SPRITE.setTexture(texture1);    
-        
-    window1.draw(SPRITE);
-    window1.display();
-    sf::Event localEvent;
-    while(true){
-        while(window1.pollEvent(localEvent)){
-        if(localEvent.type == sf::Event::EventType::KeyPressed || localEvent.type == sf::Event::EventType::MouseButtonPressed || localEvent.type == sf::Event::EventType::Closed)
-            return;   
-    
-        }        
-    }
+        _texture.loadFromStream(input);
+        _sprite.setTexture(_texture);    
+  
+    //sf::Event localEvent;
+//    while(true){
+//        while(window1.pollEvent(localEvent)){
+//        if(localEvent.type == sf::Event::EventType::KeyPressed || localEvent.type == sf::Event::EventType::MouseButtonPressed || localEvent.type == sf::Event::EventType::Closed)
+//            return;   
+//    
+//        }        
+//    }
+}
+
+void Background::drawBackground(sf::RenderWindow& window1){
+    window1.draw(_sprite);
 }

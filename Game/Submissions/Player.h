@@ -1,23 +1,30 @@
 #pragma once
-#include "Movement.h"
+//#include "Movement.h"
+#include "playerMovement.h"
 //player for the game
 
-#include <SFML/Graphics.hpp>
+//#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <memory>
 
 
-class Player : public Movement{
+class Player : public playerMovement{
 
 public:
-    Player(std::string imDirectory,const sf::Vector2f& startPosition,  const sf::Vector2f& origin,const double& radius,const sf::Vector2f& scale = sf::Vector2f(0.3,0.3));
-    void drawPlayer(sf::RenderWindow &window); 
-    void setScale(const sf::Vector2f& newScale);
-    sf::Vector2f getScale() const;
-    double getGlobalBoundHeight();
+    Player();
+    void initialize(std::string imageDir,Position& startPosition, Position& origin,const double& radius);
+    std::string getImageDir() const;
+    void setImageDir(const std::string& imageDir);
+    //void drawPlayer(sf::RenderWindow &window); 
+    //void setScale(const sf::Vector2f& newScale);
+    //sf::Vector2f getScale() const;
+    //void scale(const sf::Vector2f& scale);
+    //double getGlobalBoundHeight();
 private:
-    sf::Texture pTexture;
-    sf::Vector2f _scale;
-    std::shared_ptr<sf::Sprite> _sprite;
-    double _globalBoundHeight; 
+    //sf::Texture pTexture;
+    //sf::Vector2f _scale;
+    //std::shared_ptr<sf::Sprite> _sprite;
+    std::string _imageDir;
+    
+    //double _globalBoundHeight; 
 };
