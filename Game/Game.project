@@ -20,6 +20,12 @@
     <File Name="Submissions/SplashScreen.cpp"/>
     <File Name="Submissions/SplashScreen.h"/>
     <File Name="Submissions/gameTest.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="Submissions/playerMovement.h"/>
+    <File Name="Submissions/playerMovement.cpp"/>
+    <File Name="Submissions/Position.h"/>
+    <File Name="Submissions/playerSFML.h"/>
+    <File Name="Submissions/playerSFML.cpp"/>
+    <File Name="Submissions/Position.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

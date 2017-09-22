@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Thabiso Magwaza
-Date                   :=20/09/2017
+Date                   :=22/09/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Submissions_Background.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_Game.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_Movement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_source.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_SplashScreen.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Submissions_Background.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_Game.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_Movement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_source.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_SplashScreen.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_playerMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_playerSFML.cpp$(ObjectSuffix) $(IntermediateDirectory)/Submissions_Position.cpp$(ObjectSuffix) 
 
 
 
@@ -140,6 +140,30 @@ $(IntermediateDirectory)/Submissions_SplashScreen.cpp$(DependSuffix): Submission
 
 $(IntermediateDirectory)/Submissions_SplashScreen.cpp$(PreprocessSuffix): Submissions/SplashScreen.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Submissions_SplashScreen.cpp$(PreprocessSuffix) Submissions/SplashScreen.cpp
+
+$(IntermediateDirectory)/Submissions_playerMovement.cpp$(ObjectSuffix): Submissions/playerMovement.cpp $(IntermediateDirectory)/Submissions_playerMovement.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/softwareProject/Game/Submissions/playerMovement.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Submissions_playerMovement.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Submissions_playerMovement.cpp$(DependSuffix): Submissions/playerMovement.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Submissions_playerMovement.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Submissions_playerMovement.cpp$(DependSuffix) -MM Submissions/playerMovement.cpp
+
+$(IntermediateDirectory)/Submissions_playerMovement.cpp$(PreprocessSuffix): Submissions/playerMovement.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Submissions_playerMovement.cpp$(PreprocessSuffix) Submissions/playerMovement.cpp
+
+$(IntermediateDirectory)/Submissions_playerSFML.cpp$(ObjectSuffix): Submissions/playerSFML.cpp $(IntermediateDirectory)/Submissions_playerSFML.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/softwareProject/Game/Submissions/playerSFML.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Submissions_playerSFML.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Submissions_playerSFML.cpp$(DependSuffix): Submissions/playerSFML.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Submissions_playerSFML.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Submissions_playerSFML.cpp$(DependSuffix) -MM Submissions/playerSFML.cpp
+
+$(IntermediateDirectory)/Submissions_playerSFML.cpp$(PreprocessSuffix): Submissions/playerSFML.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Submissions_playerSFML.cpp$(PreprocessSuffix) Submissions/playerSFML.cpp
+
+$(IntermediateDirectory)/Submissions_Position.cpp$(ObjectSuffix): Submissions/Position.cpp $(IntermediateDirectory)/Submissions_Position.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/Thabiso Magwaza/Desktop/Electrical Engineering Undergrad/Third Year/SecondSemester/ELEN3009/Project/softwareProject/Game/Submissions/Position.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Submissions_Position.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Submissions_Position.cpp$(DependSuffix): Submissions/Position.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Submissions_Position.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Submissions_Position.cpp$(DependSuffix) -MM Submissions/Position.cpp
+
+$(IntermediateDirectory)/Submissions_Position.cpp$(PreprocessSuffix): Submissions/Position.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Submissions_Position.cpp$(PreprocessSuffix) Submissions/Position.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

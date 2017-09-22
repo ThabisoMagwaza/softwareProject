@@ -1,4 +1,6 @@
-Debug/Submissions_Game.cpp.o: Submissions/Game.cpp Submissions/Game.h \
+Debug/Submissions_playerSFML.cpp.o: Submissions/playerSFML.cpp \
+ Submissions/playerSFML.h Submissions/Player.h \
+ Submissions/playerMovement.h Submissions/Position.h \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Window.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/System.hpp \
@@ -67,12 +69,15 @@ Debug/Submissions_Game.cpp.o: Submissions/Game.cpp Submissions/Game.h \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/RenderWindow.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Shader.hpp \
  C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Sprite.hpp \
- C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Text.hpp \
- Submissions/Player.h Submissions/playerMovement.h Submissions/Position.h \
- Submissions/Background.h Submissions/Movement.h Submissions/playerSFML.h \
- Submissions/SplashScreen.h
+ C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Text.hpp
 
-Submissions/Game.h:
+Submissions/playerSFML.h:
+
+Submissions/Player.h:
+
+Submissions/playerMovement.h:
+
+Submissions/Position.h:
 
 C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics.hpp:
 
@@ -211,17 +216,3 @@ C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphic
 C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Sprite.hpp:
 
 C:\Users\Thabiso\ Magwaza\Desktop\ProgramSetups\win-64\sfml\include/SFML/Graphics/Text.hpp:
-
-Submissions/Player.h:
-
-Submissions/playerMovement.h:
-
-Submissions/Position.h:
-
-Submissions/Background.h:
-
-Submissions/Movement.h:
-
-Submissions/playerSFML.h:
-
-Submissions/SplashScreen.h:
